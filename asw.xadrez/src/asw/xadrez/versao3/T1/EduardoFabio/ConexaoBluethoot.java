@@ -5,15 +5,14 @@ public class ConexaoBluethoot extends DataElement {
 	public ConexaoBluethoot(boolean bool) {
 		
 		super(bool);
-
 	}
 	public conectarBluetooth() {
 		
-		LocalDevice.getDiscoverable();
+		LocalDevice.setDiscoverable(int mode);
 	}
 	protected void buscarNaRedeBluetooth() {
 		
-		
+		LocalDevice.getDiscoverable();		
 	}
 	protected void desafiarJogador() {
 		
@@ -21,6 +20,6 @@ public class ConexaoBluethoot extends DataElement {
 	}
 	protected void confirmarPartida() {
 		
-		
+		ServiceRecord.setAttributeValue(valueType, null);
 	}
 }
